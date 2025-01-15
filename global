@@ -1,0 +1,20 @@
+#!/bin/bash
+#global path to database directory
+DB_DIR="$(pwd)/Databases"
+SELECTED_DB=""
+SELECTED_TABLE=""
+COLUMNS=""
+DATABASES_ARR=($(ls -l "$DB_DIR" | grep '^d' | awk '{print $NF}'))
+
+# Color variables
+red='\033[0;31m'
+green='\033[0;32m'
+yellow='\033[0;93m'
+blue='\033[0;94m'
+magenta='\033[0;95m'
+cyan='\033[0;96m'
+gray='\033[0;37m'
+# Clear the color after that
+clear='\033[0m'
+
+
